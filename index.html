@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Parallax Tiled 2020 Part 1</title>
+    <script src="js/phaser.js"></script>
+    <script src='js/SceneA.js'></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var config = {
+            width: 896,
+            height: 896,
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH,
+                min: {
+                    width: 440,
+                    height: 440
+
+                },
+                max: {
+                    width: 896,
+                    height: 896
+
+                }
+            },
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: {
+                        y: 400
+                    },
+                    debug: false
+                }
+            },
+            scene: SceneA
+        }
+
+        var game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
